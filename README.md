@@ -5,9 +5,9 @@
 tomhdaです。
 
 日本人で、小さな広告代理店で働いています。  
-プロダクトは全てCodex, Claude codeらが作成したものです。  
+プロダクトは全てCodex, Claude Codeらが作成したものです。  
 私はエンジニアではありませんし、通常の教育もあまりちゃんと受けていません。  
-願わくばＡＩが、私のようなあまり知能に恵まれなかった人々の力になることを願っています。
+願わくばAIが、私のようなあまり知能に恵まれなかった人々の力になることを願っています。
 
 仕事で使う便利ツールや、個人的に興味のあるプロダクトを製作しています。
 
@@ -17,8 +17,8 @@ tomhdaです。
 AMD Ryzen系のNPUでReal-ESRGAN、Swin-IR、AdcSR等の超解像モデルを動かした際の測定・バグ回避・高速化の記録。未知のバグ（[#397](https://github.com/amd/RyzenAI-SW/issues/397) / [#398](https://github.com/amd/RyzenAI-SW/issues/398) / [#402](https://github.com/amd/RyzenAI-SW/issues/402)）を発見し、AMDに報告しています。
 
 ### [ultraeasy-upscaler](https://github.com/tomhda/ultraeasy-upscaler)
-画像・動画をローカルで高画質化＋フレーム補間まで超簡単にGUIで行えるようにする完全無料ツールを目指して開発中。  
-GPU（DirectML / CUDA / Vulkan）と AMD Ryzen AI の NPU で動作。まだ全然ultraeasyではありません。
+画像・動画をローカルで高画質化＋フレーム補間まで超簡単にGUIで行えるようにする完全無料ツール（開発中）  
+GPU（DirectML / CUDA / Vulkan）と AMD Ryzen AI の NPU で動作。開発中であり、まだ全然ultraeasyではありません。
 
 ### [codex-app-recovery](https://github.com/tomhda/codex-app-recovery)
 Windows版Codexの画面フリーズ・内蔵ブラウザ消失・チャット送信不可・スケジュール喪失などの不具合からの復旧をサポートする非公式ツール。
