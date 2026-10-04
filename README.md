@@ -79,6 +79,10 @@ Runs on GPU (DirectML / CUDA / Vulkan) and the AMD Ryzen AI NPU. Honestly, it's 
 ### [codex-app-recovery](https://github.com/tomhda/codex-app-recovery)
 An unofficial tool that helps you recover from problems in the Windows Codex app: frozen screens, the built-in browser disappearing, chats that won't send, lost schedules, and more.
 
+### [SILframe](https://github.com/tomhda/SILframe)
+A video player for Windows. It keeps the UX of the stock Windows player as intact as possible while adding playback features such as jumping by a set number of seconds, frame-by-frame stepping, and saving (or copying) the current frame.
+It also has simple editing tools built in, so you can trim, crop, rotate and change speed without opening another editing app.
+
 ---
 
 ## Chrome Extensions
