@@ -23,6 +23,10 @@ GPU（DirectML / CUDA / Vulkan）と AMD Ryzen AI の NPU で動作。開発中�
 ### [codex-app-recovery](https://github.com/tomhda/codex-app-recovery)
 Windows版Codexの画面フリーズ・内蔵ブラウザ消失・チャット送信不可・スケジュール喪失などの不具合からの復旧をサポートする非公式ツール。
 
+### [SILframe](https://github.com/tomhda/SILframe)
+Windows用動画再生プレーヤー。Windows標準の再生アプリのUXをなるべく変えないまま、指定秒数移動・コマ送り・フレーム保存（コピー）などの再生機能に対応しています。
+また簡単な編集ツールも組み込んであり、他の編集アプリを開かずにトリミング・クロップ・回転・速度変更などが可能です。
+
 ---
 
 ## Chrome 拡張
