@@ -16,16 +16,17 @@ tomhdaです。
 ### [ryzen-ai-npu-super-resolution-notes](https://github.com/tomhda/ryzen-ai-npu-super-resolution-notes)
 AMD Ryzen系のNPUでReal-ESRGAN、Swin-IR、AdcSR等の超解像モデルを動かした際の測定・バグ回避・高速化の記録。未知のバグ（[#397](https://github.com/amd/RyzenAI-SW/issues/397) / [#398](https://github.com/amd/RyzenAI-SW/issues/398) / [#402](https://github.com/amd/RyzenAI-SW/issues/402)）を発見し、AMDに報告しています。
 
-### [ultraeasy-upscaler](https://github.com/tomhda/ultraeasy-upscaler)
-画像・動画をローカルで高画質化＋フレーム補間まで超簡単にGUIで行えるようにする完全無料ツール（開発中）  
-GPU（DirectML / CUDA / Vulkan）と AMD Ryzen AI の NPU で動作。開発中であり、まだ全然ultraeasyではありません。
+### [TOGU SCALER](https://github.com/tomhda/togu-scaler)
+画像・動画をローカル動作で高画質化＋フレーム補間まで超簡単にGUIで行えるようにするWindowsアプリ。
+エージェントフレンドリー。
+GPU（DirectML / CUDA / Vulkan）と AMD Ryzen AI の NPU で動作。上記ノートにあるSwinIRとAdcSRがAMD NPUで動かせます。
 
 ### [codex-app-recovery](https://github.com/tomhda/codex-app-recovery)
 Windows版Codexの画面フリーズ・内蔵ブラウザ消失・チャット送信不可・スケジュール喪失などの不具合からの復旧をサポートする非公式ツール。
 
 ### [SILframe](https://github.com/tomhda/SILframe)
 Windows用動画再生プレーヤー。Windows標準の再生アプリのUXをなるべく変えないまま、指定秒数移動・コマ送り・フレーム保存（コピー）などの再生機能に対応しています。
-また簡単な編集ツールも組み込んであり、他の編集アプリを開かずにトリミング・クロップ・回転・速度変更などが可能です。
+また簡単な編集ツールも組み込んであり、他の編集アプリを開かずにトリミング・クロップ・回転・速度変更などが可能です。エージェントフレンドリー。
 
 ---
 
