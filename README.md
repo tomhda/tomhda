@@ -18,7 +18,7 @@ AMD Ryzen系のNPUでReal-ESRGAN、Swin-IR、AdcSR等の超解像モデルを動
 
 ### [TOGU SCALER](https://github.com/tomhda/togu-scaler)
 画像・動画をローカル動作で高画質化＋フレーム補間まで超簡単にGUIで行えるようにするWindowsアプリ。
-エージェントフレンドリー。
+[エージェントフレンドリー](https://github.com/tomhda/agent-friendly-mark)。
 GPU（DirectML / CUDA / Vulkan）と AMD Ryzen AI の NPU で動作。上記ノートにあるSwinIRとAdcSRがAMD NPUで動かせます。
 
 ### [codex-app-recovery](https://github.com/tomhda/codex-app-recovery)
@@ -26,7 +26,11 @@ Windows版Codexの画面フリーズ・内蔵ブラウザ消失・チャット�
 
 ### [SILframe](https://github.com/tomhda/SILframe)
 Windows用動画再生プレーヤー。Windows標準の再生アプリのUXをなるべく変えないまま、指定秒数移動・コマ送り・フレーム保存（コピー）などの再生機能に対応しています。
-また簡単な編集ツールも組み込んであり、他の編集アプリを開かずにトリミング・クロップ・回転・速度変更などが可能です。エージェントフレンドリー。
+また簡単な編集ツールも組み込んであり、他の編集アプリを開かずにトリミング・クロップ・回転・速度変更などが可能です。[エージェントフレンドリー](https://github.com/tomhda/agent-friendly-mark)。
+
+### [agent-friendly-mark](https://github.com/tomhda/agent-friendly-mark)
+AIエージェントが使いやすいように作ったソフトに付けるマーク。基準・確かめ方・AGENTS.mdのひな形・バッジを置いています。  
+上記のTOGU SCALERとSILframeはこの基準で作っています。
 
 ---
 
@@ -73,16 +77,21 @@ I build handy tools for my work, and products I'm personally curious about.
 ### [ryzen-ai-npu-super-resolution-notes](https://github.com/tomhda/ryzen-ai-npu-super-resolution-notes)
 Notes from running super-resolution models such as Real-ESRGAN, SwinIR and AdcSR on AMD Ryzen AI NPUs: measurements, bug workarounds and speedups. I found previously unknown bugs ([#397](https://github.com/amd/RyzenAI-SW/issues/397) / [#398](https://github.com/amd/RyzenAI-SW/issues/398) / [#402](https://github.com/amd/RyzenAI-SW/issues/402)) and reported them to AMD.
 
-### [ultraeasy-upscaler](https://github.com/tomhda/ultraeasy-upscaler)
-A work-in-progress, completely free tool that aims to make local image/video upscaling and frame interpolation super easy through a GUI.  
-Runs on GPU (DirectML / CUDA / Vulkan) and the AMD Ryzen AI NPU. Honestly, it's not "ultra easy" yet.
+### [TOGU SCALER](https://github.com/tomhda/togu-scaler)
+A Windows app that makes local image/video upscaling and frame interpolation super easy through a GUI.
+[Agent-friendly](https://github.com/tomhda/agent-friendly-mark).
+Runs on GPU (DirectML / CUDA / Vulkan) and the AMD Ryzen AI NPU. SwinIR and AdcSR from the notes above run on the AMD NPU.
 
 ### [codex-app-recovery](https://github.com/tomhda/codex-app-recovery)
 An unofficial tool that helps you recover from problems in the Windows Codex app: frozen screens, the built-in browser disappearing, chats that won't send, lost schedules, and more.
 
 ### [SILframe](https://github.com/tomhda/SILframe)
 A video player for Windows. It keeps the UX of the stock Windows player as intact as possible while adding playback features such as jumping by a set number of seconds, frame-by-frame stepping, and saving (or copying) the current frame.
-It also has simple editing tools built in, so you can trim, crop, rotate and change speed without opening another editing app.
+It also has simple editing tools built in, so you can trim, crop, rotate and change speed without opening another editing app. [Agent-friendly](https://github.com/tomhda/agent-friendly-mark).
+
+### [agent-friendly-mark](https://github.com/tomhda/agent-friendly-mark)
+A mark for software built so AI agents can use it easily. The repository holds the criteria, how to check them, an AGENTS.md template, and the badge.  
+TOGU SCALER and SILframe above are built to these criteria.
 
 ---
 
