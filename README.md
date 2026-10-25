@@ -15,6 +15,12 @@ tomhdaです。
 
 ### [ryzen-ai-npu-super-resolution-notes](https://github.com/tomhda/ryzen-ai-npu-super-resolution-notes)
 AMD Ryzen系のNPUでReal-ESRGAN、Swin-IR、AdcSR等の超解像モデルを動かした際の測定・バグ回避・高速化の記録。未知のバグ（[#397](https://github.com/amd/RyzenAI-SW/issues/397) / [#398](https://github.com/amd/RyzenAI-SW/issues/398) / [#402](https://github.com/amd/RyzenAI-SW/issues/402)）を発見し、AMDに報告しています。
+変換したモデル（[realesr-animevideov3](https://huggingface.co/Tomoali/realesr-animevideov3-onnx) / [realesr-general-x4v3](https://huggingface.co/Tomoali/realesr-general-x4v3-onnx) / [4xNomosUni_span_multijpg](https://huggingface.co/Tomoali/4xNomosUni_span_multijpg-onnx) / [SwinIR-M x4](https://huggingface.co/Tomoali/SwinIR-M-x4-realSR-onnx) / [AdcSR](https://huggingface.co/Tomoali/AdcSR-onnx)）はHugging Faceで配布しています。DirectML用のfp32とNPU用のbf16があります。AdcSRはライセンスへの同意が必要です。
+
+### [d1-3b-ryzen-ai-npu](https://github.com/tomhda/d1-3b-ryzen-ai-npu)
+Liquid AIの判定モデルd1-3Bを、AMD Ryzen AIのNPUで動かすための実行環境と変換スクリプト。言語モデルとビジョンエンコーダの両方がNPUで動きます。
+Ryzen AI 7 PRO 350で毎秒3.51判定、1判定あたり約1.1J、CPU使用率はアイドル時とほぼ同じ。ブラウザ画面の状態判定（ログインフォーム・エラー・ダイアログなど10問）用のプリセット付きで、検証セットの正解率は95.8%。
+変換済みモデルは[Hugging Face](https://huggingface.co/Tomoali/d1-3B-ryzen-ai-npu)で配布しています。
 
 ### [TOGU SCALER](https://github.com/tomhda/togu-scaler)
 画像・動画をローカル動作で高画質化＋フレーム補間まで超簡単にGUIで行えるようにするWindowsアプリ。
@@ -76,6 +82,12 @@ I build handy tools for my work, and products I'm personally curious about.
 
 ### [ryzen-ai-npu-super-resolution-notes](https://github.com/tomhda/ryzen-ai-npu-super-resolution-notes)
 Notes from running super-resolution models such as Real-ESRGAN, SwinIR and AdcSR on AMD Ryzen AI NPUs: measurements, bug workarounds and speedups. I found previously unknown bugs ([#397](https://github.com/amd/RyzenAI-SW/issues/397) / [#398](https://github.com/amd/RyzenAI-SW/issues/398) / [#402](https://github.com/amd/RyzenAI-SW/issues/402)) and reported them to AMD.
+The converted models ([realesr-animevideov3](https://huggingface.co/Tomoali/realesr-animevideov3-onnx) / [realesr-general-x4v3](https://huggingface.co/Tomoali/realesr-general-x4v3-onnx) / [4xNomosUni_span_multijpg](https://huggingface.co/Tomoali/4xNomosUni_span_multijpg-onnx) / [SwinIR-M x4](https://huggingface.co/Tomoali/SwinIR-M-x4-realSR-onnx) / [AdcSR](https://huggingface.co/Tomoali/AdcSR-onnx)) are on Hugging Face, in fp32 for DirectML and bf16 for the NPU. AdcSR requires agreeing to its license.
+
+### [d1-3b-ryzen-ai-npu](https://github.com/tomhda/d1-3b-ryzen-ai-npu)
+Runtime and conversion scripts for running Liquid AI's decision model d1-3B on the AMD Ryzen AI NPU. Both the language model and the vision encoder run on the NPU.
+On a Ryzen AI 7 PRO 350 it gives 3.51 decisions per second at about 1.1 J each, with CPU usage unchanged from idle. Includes a preset for browser screen-state checks (10 questions such as login forms, errors and dialogs) with 95.8% accuracy on the held-out set.
+The converted model is on [Hugging Face](https://huggingface.co/Tomoali/d1-3B-ryzen-ai-npu).
 
 ### [TOGU SCALER](https://github.com/tomhda/togu-scaler)
 A Windows app that makes local image/video upscaling and frame interpolation super easy through a GUI.
