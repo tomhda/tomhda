@@ -22,6 +22,11 @@ Liquid AIの判定モデルd1-3Bを、AMD Ryzen AIのNPUで動かすための実
 Ryzen AI 7 PRO 350で毎秒3.51判定、1判定あたり約1.1J、CPU使用率はアイドル時とほぼ同じ。ブラウザ画面の状態判定（ログインフォーム・エラー・ダイアログなど10問）用のプリセット付きで、検証セットの正解率は95.8%。
 変換済みモデルは[Hugging Face](https://huggingface.co/Tomoali/d1-3B-ryzen-ai-npu)で配布しています。
 
+### [d1-2b-ryzen-ai-npu](https://github.com/tomhda/d1-2b-ryzen-ai-npu)
+Liquid AIの判定モデルd1-2Bを、AMD Ryzen AIのNPUで動かすための実行環境。言語モデルの主な投影演算とビジョンエンコーダ全体がNPUで動きます。PyTorch・transformers・torchvisionは使いません。
+Ryzen AI 7 PRO 350で、推論後のPC全体の物理メモリ増加は中央値4.279GB（PyTorchなし構成のd1-3Bは4.460GB）。同じ重みのCPU版との比較では48判定中47判定が一致。
+変換済みモデルは[Hugging Face](https://huggingface.co/Tomoali/d1-2B-ryzen-ai-npu)で配布しています。
+
 ### [TOGU SCALER](https://github.com/tomhda/togu-scaler)
 画像・動画をローカル動作で高画質化＋フレーム補間まで超簡単にGUIで行えるようにするWindowsアプリ。
 [エージェントフレンドリー](https://github.com/tomhda/agent-friendly-mark)。
@@ -88,6 +93,11 @@ The converted models ([realesr-animevideov3](https://huggingface.co/Tomoali/real
 Runtime and conversion scripts for running Liquid AI's decision model d1-3B on the AMD Ryzen AI NPU. Both the language model and the vision encoder run on the NPU.
 On a Ryzen AI 7 PRO 350 it gives 3.51 decisions per second at about 1.1 J each, with CPU usage unchanged from idle. Includes a preset for browser screen-state checks (10 questions such as login forms, errors and dialogs) with 95.8% accuracy on the held-out set.
 The converted model is on [Hugging Face](https://huggingface.co/Tomoali/d1-3B-ryzen-ai-npu).
+
+### [d1-2b-ryzen-ai-npu](https://github.com/tomhda/d1-2b-ryzen-ai-npu)
+Runtime for running Liquid AI's decision model d1-2B on the AMD Ryzen AI NPU. The language model's main dense projections and the complete vision encoder run on the NPU. It does not use PyTorch, transformers or torchvision.
+On a Ryzen AI 7 PRO 350, the whole-PC physical RAM increase after inference is a median 4.279 GB (4.460 GB for d1-3B without PyTorch). Against the same-weight CPU model, 47 of 48 decisions agreed.
+The converted model is on [Hugging Face](https://huggingface.co/Tomoali/d1-2B-ryzen-ai-npu).
 
 ### [TOGU SCALER](https://github.com/tomhda/togu-scaler)
 A Windows app that makes local image/video upscaling and frame interpolation super easy through a GUI.
