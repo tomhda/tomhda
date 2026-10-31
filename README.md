@@ -23,8 +23,8 @@ Ryzen AI 7 PRO 350で毎秒3.51判定、1判定あたり約1.1J、CPU使用率�
 変換済みモデルは[Hugging Face](https://huggingface.co/Tomoali/d1-3B-ryzen-ai-npu)で配布しています。
 
 ### [d1-2b-ryzen-ai-npu](https://github.com/tomhda/d1-2b-ryzen-ai-npu)
-Liquid AIの判定モデルd1-2Bを、AMD Ryzen AIのNPUで動かすための実行環境。言語モデルの主な投影演算とビジョンエンコーダ全体がNPUで動きます。PyTorch・transformers・torchvisionは使いません。
-Ryzen AI 7 PRO 350で、推論後のPC全体の物理メモリ増加は中央値4.279GB（PyTorchなし構成のd1-3Bは4.460GB）。同じ重みのCPU版との比較では48判定中47判定が一致。
+Liquid AIの判定モデルd1-2Bを、AMD Ryzen AIのNPUで動かすための実行環境。言語モデルの主な投影演算とビジョンエンコーダ全体がNPUで動きます。
+Ryzen AI 7 PRO 350で、推論後のPC全体の物理メモリ増加は中央値4.279GB。
 変換済みモデルは[Hugging Face](https://huggingface.co/Tomoali/d1-2B-ryzen-ai-npu)で配布しています。
 
 ### [TOGU SCALER](https://github.com/tomhda/togu-scaler)
@@ -95,8 +95,8 @@ On a Ryzen AI 7 PRO 350 it gives 3.51 decisions per second at about 1.1 J each, 
 The converted model is on [Hugging Face](https://huggingface.co/Tomoali/d1-3B-ryzen-ai-npu).
 
 ### [d1-2b-ryzen-ai-npu](https://github.com/tomhda/d1-2b-ryzen-ai-npu)
-Runtime for running Liquid AI's decision model d1-2B on the AMD Ryzen AI NPU. The language model's main dense projections and the complete vision encoder run on the NPU. It does not use PyTorch, transformers or torchvision.
-On a Ryzen AI 7 PRO 350, the whole-PC physical RAM increase after inference is a median 4.279 GB (4.460 GB for d1-3B without PyTorch). Against the same-weight CPU model, 47 of 48 decisions agreed.
+Runtime for running Liquid AI's decision model d1-2B on the AMD Ryzen AI NPU. The language model's main dense projections and the complete vision encoder run on the NPU.
+On a Ryzen AI 7 PRO 350, the whole-PC physical RAM increase after inference is a median 4.279 GB.
 The converted model is on [Hugging Face](https://huggingface.co/Tomoali/d1-2B-ryzen-ai-npu).
 
 ### [TOGU SCALER](https://github.com/tomhda/togu-scaler)
