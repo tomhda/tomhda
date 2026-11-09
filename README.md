@@ -27,6 +27,11 @@ Liquid AIの判定モデルd1-2Bを、AMD Ryzen AIのNPUで動かすための実
 Ryzen AI 7 PRO 350で、推論後のPC全体の物理メモリ増加は中央値4.279GB。
 変換済みモデルは[Hugging Face](https://huggingface.co/Tomoali/d1-2B-ryzen-ai-npu)で配布しています。
 
+### [moss-image-ryzen-ai-npu](https://github.com/tomhda/moss-image-ryzen-ai-npu)
+text-to-imageモデルMOSS-Image-SFTの4ステップ版（[akhaliq/MOSS-Image-SFT-4-steps](https://huggingface.co/akhaliq/MOSS-Image-SFT-4-steps)のLoRAを統合）を、AMD Ryzen AIのNPUで動かすための実行環境と変換スクリプト。画像サイズは512×512と1024×1024に対応。Transformerの行列積とattentionがNPUで動きます。
+Ryzen AI 7 PRO 350で、1枚あたり52秒（512×512、8枚をまとめて生成）、99秒（1024×1024、6枚をまとめて生成）。
+変換済みモデルは[Hugging Face](https://huggingface.co/Tomoali/MOSS-Image-SFT-4-steps-ryzen-ai-npu)で配布しています。
+
 ### [TOGU SCALER](https://github.com/tomhda/togu-scaler)
 画像・動画をローカル動作で高画質化＋フレーム補間まで超簡単にGUIで行えるようにするWindowsアプリ。
 [エージェントフレンドリー](https://github.com/tomhda/agent-friendly-mark)。
@@ -98,6 +103,11 @@ The converted model is on [Hugging Face](https://huggingface.co/Tomoali/d1-3B-ry
 Runtime for running Liquid AI's decision model d1-2B on the AMD Ryzen AI NPU. The language model's main dense projections and the complete vision encoder run on the NPU.
 On a Ryzen AI 7 PRO 350, the whole-PC physical RAM increase after inference is a median 4.279 GB.
 The converted model is on [Hugging Face](https://huggingface.co/Tomoali/d1-2B-ryzen-ai-npu).
+
+### [moss-image-ryzen-ai-npu](https://github.com/tomhda/moss-image-ryzen-ai-npu)
+Runtime and conversion scripts for running the MOSS-Image-SFT 4-step text-to-image model ([akhaliq/MOSS-Image-SFT-4-steps](https://huggingface.co/akhaliq/MOSS-Image-SFT-4-steps) LoRA merged) on the AMD Ryzen AI NPU. Supported image sizes: 512×512 and 1024×1024. The transformer's matrix products and attention run on the NPU.
+On a Ryzen AI 7 PRO 350, 52 s per image at 512×512 (8 images per run) and 99 s per image at 1024×1024 (6 images per run).
+The converted model is on [Hugging Face](https://huggingface.co/Tomoali/MOSS-Image-SFT-4-steps-ryzen-ai-npu).
 
 ### [TOGU SCALER](https://github.com/tomhda/togu-scaler)
 A Windows app that makes local image/video upscaling and frame interpolation super easy through a GUI.
