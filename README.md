@@ -29,7 +29,7 @@ Ryzen AI 7 PRO 350で、推論後のPC全体の物理メモリ増加は中央値
 
 ### [moss-image-ryzen-ai-npu](https://github.com/tomhda/moss-image-ryzen-ai-npu)
 text-to-imageモデルMOSS-Image-SFTの4ステップ版（[akhaliq/MOSS-Image-SFT-4-steps](https://huggingface.co/akhaliq/MOSS-Image-SFT-4-steps)のLoRAを統合）を、AMD Ryzen AIのNPUで動かすための実行環境と変換スクリプト。画像サイズは512×512と1024×1024に対応。Transformerの行列積とattentionがNPUで動きます。
-Ryzen AI 7 PRO 350で1枚あたり、512×512は52秒（8枚をまとめて生成）、1024×1024は99秒（6枚をまとめて生成）。
+Ryzen AI 7 PRO 350で、512×512は読み込み約117秒＋1枚あたり約32秒、1024×1024は読み込み約143秒＋1枚あたり約65秒（読み込みは1回の実行ごと）。
 変換済みモデルは[Hugging Face](https://huggingface.co/Tomoali/MOSS-Image-SFT-4-steps-ryzen-ai-npu)で配布しています。
 
 ### [TOGU SCALER](https://github.com/tomhda/togu-scaler)
@@ -106,7 +106,7 @@ The converted model is on [Hugging Face](https://huggingface.co/Tomoali/d1-2B-ry
 
 ### [moss-image-ryzen-ai-npu](https://github.com/tomhda/moss-image-ryzen-ai-npu)
 Runtime and conversion scripts for running the MOSS-Image-SFT 4-step text-to-image model ([akhaliq/MOSS-Image-SFT-4-steps](https://huggingface.co/akhaliq/MOSS-Image-SFT-4-steps) LoRA merged) on the AMD Ryzen AI NPU. Supported image sizes: 512×512 and 1024×1024. The transformer's matrix products and attention run on the NPU.
-On a Ryzen AI 7 PRO 350, per image: 512×512 in 52 s (8 images per run), 1024×1024 in 99 s (6 images per run).
+On a Ryzen AI 7 PRO 350, 512×512 takes 117 s to load plus 32 s per image, and 1024×1024 takes 143 s to load plus 65 s per image (loading is once per run).
 The converted model is on [Hugging Face](https://huggingface.co/Tomoali/MOSS-Image-SFT-4-steps-ryzen-ai-npu).
 
 ### [TOGU SCALER](https://github.com/tomhda/togu-scaler)
