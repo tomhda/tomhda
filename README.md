@@ -13,6 +13,8 @@ tomhdaです。
 
 ---
 
+## AI 系
+
 ### [ryzen-ai-npu-super-resolution-notes](https://github.com/tomhda/ryzen-ai-npu-super-resolution-notes)
 AMD Ryzen系のNPUでReal-ESRGAN、Swin-IR、AdcSR等の超解像モデルを動かした際の測定・バグ回避・高速化の記録。未知のバグ（[#397](https://github.com/amd/RyzenAI-SW/issues/397) / [#398](https://github.com/amd/RyzenAI-SW/issues/398) / [#402](https://github.com/amd/RyzenAI-SW/issues/402)）を発見し、AMDに報告しています。
 変換したモデル（[realesr-animevideov3](https://huggingface.co/Tomoali/realesr-animevideov3-onnx) / [realesr-general-x4v3](https://huggingface.co/Tomoali/realesr-general-x4v3-onnx) / [4xNomosUni_span_multijpg](https://huggingface.co/Tomoali/4xNomosUni_span_multijpg-onnx) / [SwinIR-M x4](https://huggingface.co/Tomoali/SwinIR-M-x4-realSR-onnx) / [AdcSR](https://huggingface.co/Tomoali/AdcSR-onnx)）はHugging Faceで配布しています。DirectML用のfp32とNPU用のbf16があります。AdcSRはライセンスへの同意が必要です。
@@ -31,6 +33,15 @@ Ryzen AI 7 PRO 350で、推論後のPC全体の物理メモリ増加は中央値
 text-to-imageモデルMOSS-Image-SFTの4ステップ版（[akhaliq/MOSS-Image-SFT-4-steps](https://huggingface.co/akhaliq/MOSS-Image-SFT-4-steps)のLoRAを統合）を、AMD Ryzen AIのNPUで動かすための実行環境と変換スクリプト。画像サイズは512×512と1024×1024に対応。Transformerの行列積とattentionがNPUで動きます。
 Ryzen AI 7 PRO 350で、512×512は読み込み約117秒＋1枚あたり約32秒、1024×1024は読み込み約143秒＋1枚あたり約65秒（読み込みは1回の実行ごと）。
 変換済みモデルは[Hugging Face](https://huggingface.co/Tomoali/MOSS-Image-SFT-4-steps-ryzen-ai-npu)で配布しています。
+
+### [minimax-h3-image-ryzen-ai-npu](https://github.com/tomhda/minimax-h3-image-ryzen-ai-npu)
+text-to-imageモデルMiniMax-H3-Image（6ステップ）を、AMD Ryzen AIのNPUで動かすための実行環境と変換スクリプト。画像サイズは1024×1024。Transformerの投影とattention、デコーダの投影がNPUで動きます。
+Ryzen AI 7 PRO 350で、1枚あたり368秒（連続6回の中央値）。生成プロセスのメモリとNPUの共有メモリは、合わせて最大4.33GB。
+変換済みモデルは[Hugging Face](https://huggingface.co/Tomoali/MiniMax-H3-Image-ryzen-ai-npu)で配布しています。
+
+---
+
+## アプリ
 
 ### [TOGU SCALER](https://github.com/tomhda/togu-scaler)
 画像・動画をローカル動作で高画質化＋フレーム補間まで超簡単にGUIで行えるようにするWindowsアプリ。
@@ -90,6 +101,8 @@ I build handy tools for my work, and products I'm personally curious about.
 
 ---
 
+## AI
+
 ### [ryzen-ai-npu-super-resolution-notes](https://github.com/tomhda/ryzen-ai-npu-super-resolution-notes)
 Notes from running super-resolution models such as Real-ESRGAN, SwinIR and AdcSR on AMD Ryzen AI NPUs: measurements, bug workarounds and speedups. I found previously unknown bugs ([#397](https://github.com/amd/RyzenAI-SW/issues/397) / [#398](https://github.com/amd/RyzenAI-SW/issues/398) / [#402](https://github.com/amd/RyzenAI-SW/issues/402)) and reported them to AMD.
 The converted models ([realesr-animevideov3](https://huggingface.co/Tomoali/realesr-animevideov3-onnx) / [realesr-general-x4v3](https://huggingface.co/Tomoali/realesr-general-x4v3-onnx) / [4xNomosUni_span_multijpg](https://huggingface.co/Tomoali/4xNomosUni_span_multijpg-onnx) / [SwinIR-M x4](https://huggingface.co/Tomoali/SwinIR-M-x4-realSR-onnx) / [AdcSR](https://huggingface.co/Tomoali/AdcSR-onnx)) are on Hugging Face, in fp32 for DirectML and bf16 for the NPU. AdcSR requires agreeing to its license.
@@ -108,6 +121,15 @@ The converted model is on [Hugging Face](https://huggingface.co/Tomoali/d1-2B-ry
 Runtime and conversion scripts for running the MOSS-Image-SFT 4-step text-to-image model ([akhaliq/MOSS-Image-SFT-4-steps](https://huggingface.co/akhaliq/MOSS-Image-SFT-4-steps) LoRA merged) on the AMD Ryzen AI NPU. Supported image sizes: 512×512 and 1024×1024. The transformer's matrix products and attention run on the NPU.
 On a Ryzen AI 7 PRO 350, 512×512 takes 117 s to load plus 32 s per image, and 1024×1024 takes 143 s to load plus 65 s per image (loading is once per run).
 The converted model is on [Hugging Face](https://huggingface.co/Tomoali/MOSS-Image-SFT-4-steps-ryzen-ai-npu).
+
+### [minimax-h3-image-ryzen-ai-npu](https://github.com/tomhda/minimax-h3-image-ryzen-ai-npu)
+Runtime and conversion scripts for running the six-step text-to-image model MiniMax-H3-Image on the AMD Ryzen AI NPU at 1024×1024. The transformer's projections and attention and the decoder's projections run on the NPU.
+On a Ryzen AI 7 PRO 350, one image takes 368 s end to end (median of six back-to-back runs). The generation processes' memory plus NPU shared memory peaks at 4.33 GB.
+The converted model is on [Hugging Face](https://huggingface.co/Tomoali/MiniMax-H3-Image-ryzen-ai-npu).
+
+---
+
+## Apps
 
 ### [TOGU SCALER](https://github.com/tomhda/togu-scaler)
 A Windows app that makes local image/video upscaling and frame interpolation super easy through a GUI.
